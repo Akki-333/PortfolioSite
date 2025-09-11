@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 export default function Navbar() {
@@ -70,8 +71,9 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-md hover:bg-accent"
               data-testid="button-mobile-menu"
+              aria-label="Toggle mobile menu"
             >
-              <i className="fas fa-bars text-foreground"></i>
+              <Menu className="h-6 w-6 text-foreground" />
             </button>
           </div>
         </div>

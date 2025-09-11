@@ -19,6 +19,9 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      external: ["drizzle-orm", "drizzle-zod"],
+    },
   },
   server: {
     headers: {

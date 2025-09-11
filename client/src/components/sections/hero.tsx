@@ -5,7 +5,7 @@ export default function Hero() {
   const scrollToSection = useSmoothScroll();
 
   return (
-    <section id="home" className="min-h-screen gradient-bg flex items-center justify-center pt-16">
+    <section id="home" className="min-h-screen hero-aurora flex items-center justify-center pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
           {/* Profile image */}

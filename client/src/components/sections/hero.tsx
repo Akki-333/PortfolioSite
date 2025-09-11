@@ -8,10 +8,15 @@ export default function Hero() {
     <section id="home" className="min-h-screen gradient-bg flex items-center justify-center pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          {/* Profile image placeholder */}
+          {/* Profile image */}
           <div className="mb-8 flex justify-center">
-            <div className="w-48 h-48 rounded-full bg-primary-foreground/10 border-4 border-primary-foreground/20 flex items-center justify-center">
-              <User className="w-24 h-24 text-primary-foreground/60" data-testid="img-profile-placeholder" />
+            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary-foreground/20 shadow-2xl">
+              <img 
+                src="/profile.png" 
+                alt="Akshay S - Profile Picture"
+                className="w-full h-full object-cover"
+                data-testid="img-profile"
+              />
             </div>
           </div>
           

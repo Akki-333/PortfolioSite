@@ -68,13 +68,13 @@ export default function Skills() {
     },
     {
       icon: Users,
-      title: "Stakeholder Coordination",
-      description: "Effective communication and project management skills"
+      title: "System Design",
+      description: "Architectural planning and scalable software solution design"
     },
     {
       icon: TrendingUp,
-      title: "Process Improvement",
-      description: "Optimization and efficiency enhancement methodologies"
+      title: "Machine Learning",
+      description: "Deep learning models and AI implementation for real-world applications"
     },
     {
       icon: Database,

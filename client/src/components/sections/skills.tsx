@@ -135,7 +135,12 @@ export default function Skills() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {technicalSkills.map((skill, index) => (
-                <div key={skill.skill} data-testid={`skill-circle-${index}`}>
+                <div 
+                  key={skill.skill} 
+                  className="skill-circle-container"
+                  style={{ '--delay': index } as React.CSSProperties}
+                  data-testid={`skill-circle-${index}`}
+                >
                   <SkillCircle {...skill} />
                 </div>
               ))}

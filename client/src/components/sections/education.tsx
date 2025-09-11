@@ -53,10 +53,21 @@ export default function Education() {
         
         <div className="max-w-4xl mx-auto">
           {/* Education Timeline */}
-          <div className="space-y-8">
-            {educationData.map((edu, index) => (
-              <Card key={edu.degree} className="card-hover" data-testid={`education-card-${index}`}>
-                <CardContent className="p-6">
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/20"></div>
+            
+            <div className="space-y-8">
+              {educationData.map((edu, index) => (
+                <div 
+                  key={edu.degree} 
+                  className={`timeline-item premium-card relative pl-20 p-6`}
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                  data-testid={`education-card-${index}`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-6 top-8 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10"></div>
+                  
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-foreground" data-testid={`education-degree-${index}`}>
@@ -90,9 +101,9 @@ export default function Education() {
                       </div>
                     )}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
             ))}
+          </div>
           </div>
           
           {/* Certifications */}

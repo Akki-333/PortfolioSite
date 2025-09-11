@@ -81,14 +81,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => scrollToSection("projects")}
-              className="bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
+              className="cta-primary magnetic-hover"
               data-testid="button-view-work"
             >
               View My Work
             </button>
             <button 
               onClick={() => scrollToSection("contact")}
-              className="border-2 border-primary-foreground text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground hover:text-primary transition-colors"
+              className="cta-secondary magnetic-hover"
               data-testid="button-get-in-touch"
             >
               Get In Touch

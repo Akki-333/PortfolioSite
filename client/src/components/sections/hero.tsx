@@ -27,7 +27,7 @@ export default function Hero() {
             Tech Enthusiast
           </p>
           <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto mb-12 leading-relaxed" data-testid="text-hero-description">
-            Calm and detail-oriented professional who excels under pressure and communicates with clarity and confidence. Brings strong skills in problem-solving, stakeholder coordination, and process improvement to ensure smooth and efficient operations.
+            Calm and detail-oriented professional who excels under pressure and communicates with clarity and confidence. Brings strong skills in problem-solving, system design, and machine learning to create innovative solutions and efficient operations.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -125,21 +125,22 @@ export default function Hero() {
           </div>
         </div>
         
-        {/* Floating Tech Chips */}
-        <div className="tech-chip tech-chip-1" data-testid="chip-tech-typescript">TypeScript</div>
-        <div className="tech-chip tech-chip-2" data-testid="chip-tech-react">React</div>
-        <div className="tech-chip tech-chip-3" data-testid="chip-tech-python">Python</div>
-        <div className="tech-chip tech-chip-4" data-testid="chip-tech-nodejs">Node.js</div>
+        {/* Floating Tech Chips - Decorative */}
+        <div className="tech-chip tech-chip-1" data-testid="chip-tech-typescript" aria-hidden="true">TypeScript</div>
+        <div className="tech-chip tech-chip-2" data-testid="chip-tech-react" aria-hidden="true">React</div>
+        <div className="tech-chip tech-chip-3" data-testid="chip-tech-python" aria-hidden="true">Python</div>
+        <div className="tech-chip tech-chip-4" data-testid="chip-tech-nodejs" aria-hidden="true">Node.js</div>
         
         {/* Scroll Indicator */}
-        <div 
+        <button 
           className="scroll-indicator" 
           onClick={() => scrollToSection("about")}
           data-testid="indicator-scroll"
+          aria-label="Scroll to About section"
         >
           <span className="text-sm font-medium">Scroll</span>
           <ChevronDown className="scroll-arrow" />
-        </div>
+        </button>
       </div>
     </section>
   );

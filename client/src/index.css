@@ -65,6 +65,12 @@
     @apply font-sans antialiased bg-background text-foreground;
     scroll-behavior: smooth;
   }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html, body {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 @layer components {
@@ -233,6 +239,7 @@
     background-size: 75px 75px;
     animation: grid-move 20s linear infinite;
     opacity: 0.6;
+    pointer-events: none;
   }
   
   .hero-aurora::after {
@@ -252,6 +259,7 @@
       );
     animation: grain-move 8s linear infinite;
     opacity: 0.4;
+    pointer-events: none;
   }
   
   @keyframes aurora-shift {
@@ -483,11 +491,14 @@
     opacity: 1;
   }
   
-  .cta-primary:hover {
+  .cta-primary:hover,
+  .cta-primary:focus-visible {
     transform: translateY(-2px) scale(1.05);
     box-shadow: 
       0 20px 40px rgba(0, 0, 0, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    outline: 2px solid rgba(59, 130, 246, 0.8);
+    outline-offset: 2px;
   }
   
   .cta-secondary {
@@ -530,7 +541,8 @@
     opacity: 1;
   }
   
-  .cta-secondary:hover {
+  .cta-secondary:hover,
+  .cta-secondary:focus-visible {
     transform: translateY(-2px) scale(1.05);
     background: linear-gradient(145deg, 
       rgba(255, 255, 255, 0.95), 
@@ -539,6 +551,8 @@
     box-shadow: 
       0 20px 40px rgba(0, 0, 0, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    outline: 2px solid rgba(59, 130, 246, 0.8);
+    outline-offset: 2px;
   }
   
   @keyframes gradient-border {
@@ -582,22 +596,13 @@
     font-size: 14px;
     font-weight: 500;
     animation: float-orbit 8s ease-in-out infinite;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default;
+    pointer-events: none;
     box-shadow: 
       0 8px 32px rgba(0, 0, 0, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
   
-  .tech-chip:hover {
-    transform: scale(1.1);
-    background: linear-gradient(145deg, 
-      rgba(255, 255, 255, 0.25), 
-      rgba(255, 255, 255, 0.15));
-    box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
   
   .tech-chip-1 {
     top: 20%;
@@ -665,7 +670,8 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
   
-  .social-icon:hover {
+  .social-icon:hover,
+  .social-icon:focus-visible {
     transform: translateY(-3px) scale(1.1);
     background: linear-gradient(145deg, 
       rgba(255, 255, 255, 0.2), 
@@ -675,6 +681,8 @@
       0 12px 40px rgba(0, 0, 0, 0.15),
       0 0 20px rgba(255, 255, 255, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
   }
   
   /* Scroll Indicator */
@@ -692,9 +700,12 @@
     transition: all 0.3s ease;
   }
   
-  .scroll-indicator:hover {
+  .scroll-indicator:hover,
+  .scroll-indicator:focus-visible {
     color: rgba(255, 255, 255, 1);
     transform: translateX(-50%) translateY(-2px);
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
   }
   
   .scroll-arrow {
@@ -727,8 +738,15 @@
       animation: none;
     }
     .social-icon:hover,
-    .tech-chip:hover,
-    .scroll-indicator:hover {
+    .social-icon:focus-visible,
+    .scroll-indicator:hover,
+    .scroll-indicator:focus-visible {
+      transform: none;
+    }
+    .cta-primary:hover,
+    .cta-primary:focus-visible,
+    .cta-secondary:hover,
+    .cta-secondary:focus-visible {
       transform: none;
     }
   }

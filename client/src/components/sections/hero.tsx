@@ -9,10 +9,7 @@ export default function Hero() {
   
   const roles = [
     "Tech Enthusiast",
-    "ML Explorer", 
-    "Full-Stack Builder",
-    "Data Analytics Expert",
-    "Problem Solver"
+    "Passionate Data Analyst"
   ];
   
   useEffect(() => {
@@ -126,10 +123,10 @@ export default function Hero() {
         </div>
         
         {/* Floating Tech Chips - Decorative */}
-        <div className="tech-chip tech-chip-1" data-testid="chip-tech-typescript" aria-hidden="true">TypeScript</div>
-        <div className="tech-chip tech-chip-2" data-testid="chip-tech-react" aria-hidden="true">React</div>
+        <div className="tech-chip tech-chip-1" data-testid="chip-tech-powerbi" aria-hidden="true">Power BI</div>
+        <div className="tech-chip tech-chip-2" data-testid="chip-tech-sql" aria-hidden="true">SQL</div>
         <div className="tech-chip tech-chip-3" data-testid="chip-tech-python" aria-hidden="true">Python</div>
-        <div className="tech-chip tech-chip-4" data-testid="chip-tech-nodejs" aria-hidden="true">Node.js</div>
+        <div className="tech-chip tech-chip-4" data-testid="chip-tech-github" aria-hidden="true">GitHub</div>
         
         {/* Scroll Indicator */}
         <button 

@@ -605,26 +605,26 @@
   
   
   .tech-chip-1 {
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 5%;
     animation-delay: 0s;
   }
   
   .tech-chip-2 {
-    top: 30%;
-    right: 15%;
+    top: 25%;
+    right: 8%;
     animation-delay: -2s;
   }
   
   .tech-chip-3 {
-    bottom: 35%;
-    left: 8%;
+    bottom: 30%;
+    left: 6%;
     animation-delay: -4s;
   }
   
   .tech-chip-4 {
-    bottom: 25%;
-    right: 12%;
+    bottom: 20%;
+    right: 10%;
     animation-delay: -6s;
   }
   

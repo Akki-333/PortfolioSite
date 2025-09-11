@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Search, Users, TrendingUp, Database, Code, Cpu, Bug, Brain } from "lucide-react";
+import { Search, Users, TrendingUp, Database, Code, Cpu, Bug, Brain, Settings } from "lucide-react";
 
 interface SkillCircleProps {
   skill: string;
@@ -100,14 +100,14 @@ export default function Skills() {
       description: "Analytical thinking and systematic approach to complex challenges"
     },
     {
-      icon: Users,
-      title: "System Design",
-      description: "Architectural planning and scalable software solution design"
+      icon: Database,
+      title: "SQL & Database Management",
+      description: "Database design, optimization, and complex query development"
     },
     {
-      icon: TrendingUp,
-      title: "Machine Learning",
-      description: "Deep learning models and AI implementation for real-world applications"
+      icon: Settings,
+      title: "Technical Troubleshooting",
+      description: "Systematic problem diagnosis and resolution across various systems"
     },
     {
       icon: Database,

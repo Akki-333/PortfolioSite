@@ -8,7 +8,7 @@ export default function Education() {
       degree: "Bachelor of Engineering - Computer Science",
       institution: "Bannari Amman Institute of Technology",
       period: "2021 - 2025",
-      status: "Current",
+      status: "Completed",
       grade: "CGPA: 7.1",
       specialization: "Specialization in Data Analytics and Software Development"
     },
@@ -68,7 +68,7 @@ export default function Education() {
                     </div>
                     <div className="text-right mt-2 lg:mt-0">
                       <Badge 
-                        variant={edu.status === "Current" ? "default" : "secondary"}
+                        variant={edu.status === "Completed" ? "default" : "secondary"}
                         data-testid={`education-status-${index}`}
                       >
                         {edu.status}

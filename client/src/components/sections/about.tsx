@@ -13,7 +13,7 @@ export default function About() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-foreground" data-testid="text-who-i-am">Who I Am</h3>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-about-description-1">
-              A self-starter with a focus on reliability and results, capable of turning complex challenges into actionable solutions that support organizational goals. Currently pursuing B.E in Computer Science and Engineering with a strong foundation in data analytics and software development.
+              A self-starter with a focus on reliability and results, capable of turning complex challenges into actionable solutions that support organizational goals. Recently completed B.E in Computer Science and Engineering with a strong foundation in data analytics and software development.
             </p>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-about-description-2">
               I bring expertise in troubleshooting, data analysis, and system development, with hands-on experience in Python, SQL, and Power BI. My passion lies in leveraging technology to solve real-world problems and create meaningful impact.
@@ -40,7 +40,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-3" data-testid="fact-cgpa">
                 <Award className="text-primary w-5 h-5" />
-                <span className="text-muted-foreground">7.1 CGPA (Current)</span>
+                <span className="text-muted-foreground">7.1 CGPA (Completed)</span>
               </div>
               <div className="flex items-center gap-3" data-testid="fact-email">
                 <Mail className="text-primary w-5 h-5" />

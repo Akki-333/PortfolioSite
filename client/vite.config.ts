@@ -12,6 +12,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
       "@shared": path.resolve(__dirname, "../shared"),
       "@assets": path.resolve(__dirname, "../attached_assets"),
+      "drizzle-orm": path.resolve(__dirname, "../node_modules/drizzle-orm"),
+      "drizzle-zod": path.resolve(__dirname, "../node_modules/drizzle-zod"),
     },
   },
   build: {

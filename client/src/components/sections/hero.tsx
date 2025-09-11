@@ -20,10 +20,10 @@ export default function Hero() {
             </div>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4" data-testid="text-hero-name">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 text-glow" data-testid="text-hero-name">
             Akshay S
           </h1>
-          <p className="text-xl sm:text-2xl text-primary-foreground/90 mb-8" data-testid="text-hero-title">
+          <p className="text-xl sm:text-2xl text-primary-foreground/90 mb-8 text-glow" data-testid="text-hero-title">
             Tech Enthusiast
           </p>
           <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto mb-12 leading-relaxed" data-testid="text-hero-description">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 export default function Hero() {
@@ -94,6 +95,50 @@ export default function Hero() {
               Get In Touch
             </button>
           </div>
+          
+          {/* Social Icons */}
+          <div className="social-icons">
+            <a 
+              href="#" 
+              className="social-icon" 
+              data-testid="icon-social-github"
+              aria-label="GitHub Profile"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a 
+              href="#" 
+              className="social-icon" 
+              data-testid="icon-social-linkedin"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a 
+              href="mailto:contact@akshays.dev" 
+              className="social-icon" 
+              data-testid="icon-social-email"
+              aria-label="Send Email"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+        
+        {/* Floating Tech Chips */}
+        <div className="tech-chip tech-chip-1" data-testid="chip-tech-typescript">TypeScript</div>
+        <div className="tech-chip tech-chip-2" data-testid="chip-tech-react">React</div>
+        <div className="tech-chip tech-chip-3" data-testid="chip-tech-python">Python</div>
+        <div className="tech-chip tech-chip-4" data-testid="chip-tech-nodejs">Node.js</div>
+        
+        {/* Scroll Indicator */}
+        <div 
+          className="scroll-indicator" 
+          onClick={() => scrollToSection("about")}
+          data-testid="indicator-scroll"
+        >
+          <span className="text-sm font-medium">Scroll</span>
+          <ChevronDown className="scroll-arrow" />
         </div>
       </div>
     </section>

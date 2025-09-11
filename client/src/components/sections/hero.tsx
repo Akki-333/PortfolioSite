@@ -1,22 +1,46 @@
+import { useState, useEffect } from "react";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
-import { User } from "lucide-react";
 
 export default function Hero() {
   const scrollToSection = useSmoothScroll();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      setMousePos({
+        x: (clientX - centerX) / centerX * 10, // Limit to 10px movement
+        y: (clientY - centerY) / centerY * 10
+      });
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen hero-aurora flex items-center justify-center pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          {/* Profile image */}
+          {/* Profile image with glow effect */}
           <div className="mb-8 flex justify-center">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary-foreground/20 shadow-2xl">
-              <img 
-                src="/profile.png" 
-                alt="Akshay S - Profile Picture"
-                className="w-full h-full object-cover"
-                data-testid="img-profile"
-              />
+            <div 
+              className="parallax-container"
+              style={{
+                transform: `translate(${mousePos.x}px, ${mousePos.y}px)`
+              }}
+            >
+              <div className="w-48 h-48 avatar-glow border-4 border-white/30 shadow-2xl">
+                <img 
+                  src="/profile.png" 
+                  alt="Akshay S - Profile Picture"
+                  className="w-full h-full object-cover rounded-full"
+                  data-testid="img-profile"
+                />
+              </div>
             </div>
           </div>
           

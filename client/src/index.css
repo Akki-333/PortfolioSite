@@ -287,6 +287,83 @@
     }
   }
 
+  /* Glowing Avatar Ring */
+  .avatar-glow {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .avatar-glow::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: conic-gradient(
+      from 0deg,
+      #ff006e,
+      #8338ec,
+      #3a86ff,
+      #06ffa5,
+      #ffbe0b,
+      #ff006e
+    );
+    border-radius: 50%;
+    animation: ring-rotate 3s linear infinite;
+    z-index: -1;
+  }
+  
+  .avatar-glow::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+    z-index: -2;
+  }
+  
+  @keyframes ring-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes glow-pulse {
+    from { 
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    to { 
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  .parallax-container {
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .avatar-glow::before,
+    .avatar-glow::after {
+      animation: none;
+    }
+    .parallax-container {
+      transition: none;
+    }
+  }
+
   .glass-morphism {
     background: linear-gradient(145deg, 
       rgba(255, 255, 255, 0.15) 0%, 

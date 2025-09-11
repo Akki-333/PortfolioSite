@@ -4,6 +4,15 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 export default function Hero() {
   const scrollToSection = useSmoothScroll();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  
+  const roles = [
+    "Tech Enthusiast",
+    "ML Explorer", 
+    "Full-Stack Builder",
+    "Data Analytics Expert",
+    "Problem Solver"
+  ];
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -20,6 +29,16 @@ export default function Hero() {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+  
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    
+    const roleInterval = setInterval(() => {
+      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 2500);
+    
+    return () => clearInterval(roleInterval);
+  }, [roles.length]);
 
   return (
     <section id="home" className="min-h-screen hero-aurora flex items-center justify-center pt-16">
@@ -47,9 +66,14 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 text-glow" data-testid="text-hero-name">
             Akshay S
           </h1>
-          <p className="text-xl sm:text-2xl text-primary-foreground/90 mb-8 text-glow" data-testid="text-hero-title">
-            Tech Enthusiast
-          </p>
+          <div className="text-xl sm:text-2xl text-primary-foreground/90 mb-8 text-glow role-rotator" aria-live="polite">
+            <span 
+              className="role-text role-gradient-text active" 
+              data-testid={`text-hero-role-${currentRoleIndex}`}
+            >
+              {roles[currentRoleIndex]}
+            </span>
+          </div>
           <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto mb-12 leading-relaxed" data-testid="text-hero-description">
             Calm and detail-oriented professional who excels under pressure and communicates with clarity and confidence. Brings strong skills in problem-solving, system design, and machine learning to create innovative solutions and efficient operations.
           </p>

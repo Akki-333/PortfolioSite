@@ -1,4 +1,6 @@
-# Portfolio Website
+# Akshay S Portfolio Website
+
+Welcome to my personal portfolio website! I'm Akshay S, a passionate software developer specializing in full-stack development with modern technologies. This portfolio showcases my projects, skills, and experience in building scalable web applications using React, TypeScript, Node.js, and more.
 
 A modern, responsive portfolio website built with React, TypeScript, and Express.js.
 
@@ -108,6 +110,14 @@ PortfolioSite/
 - `npm run start` - Start production server
 - `npm run check` - Run TypeScript type checking
 - `npm run vercel-build` - Build for Vercel deployment
+
+## 🔄 Development Workflow
+
+1. **Local Development**: Use `npm run dev` to start the development server with hot reloading for both frontend and backend.
+2. **Building**: Run `npm run build` to create a production build of the application.
+3. **Preview**: Use `npm run preview` in the client directory to preview the production build locally.
+4. **Testing**: Ensure all features work correctly before deployment.
+5. **Deployment**: Push changes to the main branch to trigger automatic deployment to Vercel.
 
 ## 🌐 Live Demo
 

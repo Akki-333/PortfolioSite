@@ -3,7 +3,6 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { InsertContactMessage } from "@shared/schema";
-import type { InsertContactMessage } from "@shared/schema";
 import { insertContactMessageSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -15,11 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, Github, Download } from "lucide-react";
 
-import type { InsertContactMessage } from "@shared/schema";
-
-export default function Contact() {
-  const { toast } = useToast();
-  
+export default function ContactSection() {
   const form = useForm<InsertContactMessage>({
     resolver: zodResolver(insertContactMessageSchema),
     defaultValues: {
@@ -30,6 +25,8 @@ export default function Contact() {
       message: "",
     },
   });
+
+  const toast = useToast();
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactMessage) => {

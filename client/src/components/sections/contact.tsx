@@ -16,7 +16,7 @@ import { Mail, Phone, Linkedin, Github, Download } from "lucide-react";
 
 export default function ContactSection() {
   const form = useForm<InsertContactMessage>({
-    resolver: zodResolver(insertContactMessageSchema),
+    resolver: zodResolver(insertContactMessageSchema as any),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -26,7 +26,7 @@ export default function ContactSection() {
     },
   });
 
-  const toast = useToast();
+  const { toast } = useToast();
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactMessage) => {
@@ -140,6 +140,7 @@ export default function ContactSection() {
                             href={info.href}
                             className="text-primary hover:text-primary/80 transition-colors"
                             data-testid={`contact-link-${index}`}
+                            target="_blank" rel="noopener noreferrer"
                           >
                             {info.value}
                           </a>

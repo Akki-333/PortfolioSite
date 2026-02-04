@@ -77,19 +77,21 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/resume.pdf" 
+              className="cta-primary magnetic-hover inline-flex items-center justify-center"
+              data-testid="button-view-work"
+              download
+            >
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Download Resume
+            </a>
             <button 
               onClick={() => scrollToSection("projects")}
-              className="cta-primary magnetic-hover"
-              data-testid="button-view-work"
-            >
-              View My Work
-            </button>
-            <button 
-              onClick={() => scrollToSection("contact")}
               className="cta-secondary magnetic-hover"
               data-testid="button-get-in-touch"
             >
-              Get In Touch
+              View My Work
             </button>
           </div>
           

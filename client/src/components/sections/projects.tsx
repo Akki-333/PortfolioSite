@@ -9,55 +9,107 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Deep Learning for Image-Based Bibliographic Data Extraction",
+      title: "Image Captioning & Data Extraction",
+      type: "Project",
+      category: "Python",
+      duration: "2 months",
+      teamSize: "Self",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
+      description: "Managed large-scale COCO image datasets and performed structured annotation analysis using Python.",
+      fullDescription: "Developed Python scripts to visualize and interpret image-caption mappings to enhance data handling. Focused on managing large-scale COCO image datasets and performing structured annotation analysis for deep learning models.",
+      features: [
+        "COCO dataset management",
+        "Structured annotation analysis",
+        "Data visualization scripts"
+      ],
+      technologies: ["Python", "Deep Learning", "Data Extraction"],
+      challenges: [
+        "Handling massive image datasets",
+        "Accurate annotation parsing",
+        "Visualizing complex mappings"
+      ],
+      outcomes: [
+        "Streamlined data preprocessing workflow",
+        "Improved annotation consistency",
+        "Enhanced dataset visualization capabilities"
+      ]
+    },
+    {
+      title: "Stock Market Time Series Analysis & Forecasting",
+      type: "Project",
+      category: "Python",
+      duration: "2 months",
+      teamSize: "Self",
+      image: "https://images.unsplash.com/photo-1611974717482-48a0020251bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
+      description: "Conducted end-to-end analysis and forecasting of historical stock price data using Python.",
+      fullDescription: "Executed cleaning, trend analysis, and model evaluation using MAE, RMSE, MAPE, and R2 metrics. Created visualizations and reports to communicate technical insights effectively for financial data.",
+      features: [
+        "End-to-end price forecasting",
+        "Multi-metric model evaluation",
+        "Interactive data visualizations"
+      ],
+      technologies: ["Python", "Time Series", "Data Analysis"],
+      challenges: [
+        "Dealing with volatile market data",
+        "Feature engineering for forecasting",
+        "Optimizing model accuracy metrics"
+      ],
+      outcomes: [
+        "Accurate stock trend predictions",
+        "Comprehensive visualization reports",
+        "Deep understanding of forecasting metrics"
+      ]
+    },
+    {
+      title: "Deep Learning for Bibliographic Data Extraction",
       type: "Team Project",
       category: "Deep Learning",
       duration: "4 months",
       teamSize: "4 members",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
-      description: "Developed and integrated backend systems to extract and process bibliographic data from scanned academic documents using deep learning models for image and text recognition.",
-      fullDescription: "This project involved creating a comprehensive system that uses cutting-edge deep learning techniques to automatically extract bibliographic information from scanned academic documents. The system combines computer vision and natural language processing to identify and parse citations, author names, publication dates, and other metadata with high accuracy.",
+      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
+      description: "Integrated backend systems to extract and process bibliographic data from scanned academic documents.",
+      fullDescription: "This project involved creating a comprehensive system that uses cutting-edge deep learning techniques to automatically extract bibliographic information from scanned academic documents. The system combines computer vision and natural language processing.",
       features: [
-        "Interactive Streamlit-based frontend",
-        "Real-time file upload and processing",
-        "Enhanced user accessibility and interface"
+        "Interactive Streamlit frontend",
+        "Real-time file processing",
+        "High-accuracy OCR extraction"
       ],
       technologies: ["Python", "Deep Learning", "Streamlit"],
       challenges: [
-        "Handling various document formats and quality",
-        "Achieving high accuracy in text recognition",
-        "Optimizing processing speed for real-time use"
+        "Handling low-quality scans",
+        "Complex document layouts",
+        "Real-time processing optimization"
       ],
       outcomes: [
-        "95% accuracy in bibliographic data extraction",
-        "Reduced manual processing time by 80%",
-        "Successfully processed over 1000 documents"
+        "95% accuracy in extraction",
+        "80% reduction in manual effort",
+        "Successful academic deployment"
       ]
     },
     {
-      title: "Restaurant Reservation and Seating Management System",
+      title: "Restaurant Management System",
       type: "Team Project",
       category: "Web Development",
       duration: "3 months",
       teamSize: "5 members",
-      image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
-      description: "Designed and implemented a web-based system to manage table reservations, real-time seating availability, and customer flow, optimizing restaurant operations and reducing wait times.",
-      fullDescription: "A comprehensive restaurant management solution that streamlines the entire dining experience from reservation to seating. The system features intelligent table allocation algorithms, real-time availability tracking, and an intuitive interface for both customers and restaurant staff.",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
+      description: "Designed a web-based system to manage table reservations and real-time seating availability.",
+      fullDescription: "A comprehensive restaurant management solution that streamlines the entire dining experience from reservation to seating. Features intelligent table allocation and real-time availability tracking.",
       features: [
-        "Dynamic table assignment algorithms",
-        "Intuitive customer user interface",
-        "Peak-time efficiency optimization"
+        "Dynamic table assignment",
+        "Real-time status tracking",
+        "Responsive web interface"
       ],
       technologies: ["Web Development", "Database", "UI/UX"],
       challenges: [
-        "Managing concurrent reservations",
-        "Optimizing table utilization",
-        "Creating seamless user experience"
+        "Concurrent reservation logic",
+        "Peak-time flow management",
+        "Mobile-first design priority"
       ],
       outcomes: [
-        "40% reduction in customer wait times",
-        "Improved table utilization by 25%",
-        "Enhanced customer satisfaction scores"
+        "40% reduction in wait times",
+        "25% better table utilization",
+        "Streamlined staff coordination"
       ]
     }
   ];

@@ -86,11 +86,15 @@ function SkillCircle({ skill, level, percentage, icon: Icon }: SkillCircleProps)
 export default function Skills() {
   const technicalSkills = [
     { skill: "Troubleshooting & Debugging", level: "Strong", percentage: 90, icon: Bug },
-    { skill: "Power BI", level: "Intermediate", percentage: 70, icon: TrendingUp },
-    { skill: "SQL", level: "Intermediate", percentage: 65, icon: Database },
-    { skill: "Jupyter Notebook", level: "Intermediate", percentage: 60, icon: Brain },
-    { skill: "Python", level: "Beginner", percentage: 40, icon: Code },
-    { skill: "C Programming", level: "Beginner", percentage: 35, icon: Cpu },
+    { skill: "Power BI", level: "Strong", percentage: 85, icon: TrendingUp },
+    { skill: "SQL", level: "Strong", percentage: 80, icon: Database },
+    { skill: "Python", level: "Strong", percentage: 75, icon: Code },
+    { skill: "C Programming", level: "Intermediate", percentage: 70, icon: Cpu },
+    { skill: "Java", level: "Intermediate", percentage: 65, icon: Code },
+    { skill: "Web Development", level: "Intermediate", percentage: 60, icon: Code },
+    { skill: "Jupyter Notebook", level: "Intermediate", percentage: 65, icon: Brain },
+    { skill: "MS Excel", level: "Strong", percentage: 85, icon: TrendingUp },
+    { skill: "GitHub", level: "Intermediate", percentage: 75, icon: Github },
   ];
 
   const competencies = [

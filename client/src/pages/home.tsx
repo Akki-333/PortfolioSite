@@ -25,7 +25,7 @@ export default function Home() {
       <footer className="bg-card border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-muted-foreground">&copy; 2024 Akshay S. All rights reserved.</p>
+            <p className="text-muted-foreground">&copy; 2026 Akshay S. All rights reserved.</p>
             <div className="flex justify-center gap-6 mt-4">
               <a 
                 href="https://github.com/Akki-333" 

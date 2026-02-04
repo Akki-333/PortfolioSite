@@ -32,14 +32,15 @@ export default function FloatingResumeButton() {
 
   return (
     <div className="floating-resume">
-      <button 
-        onClick={handleDownloadResume}
+      <a 
+        href="/resume.pdf"
+        download="Akshay_S_Resume.pdf"
         className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
         data-testid="button-floating-resume"
       >
         <Download className="w-4 h-4" />
-        <span className="hidden sm:inline">Resume</span>
-      </button>
+        <span className="hidden sm:inline">Latest Resume</span>
+      </a>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Search, Users, TrendingUp, Database, Code, Cpu, Bug, Brain, Settings } from "lucide-react";
+import { Search, Users, TrendingUp, Database, Code, Cpu, Bug, Brain, Settings, Github } from "lucide-react";
 
 interface SkillCircleProps {
   skill: string;

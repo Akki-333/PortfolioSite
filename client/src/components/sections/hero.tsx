@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, ExternalLink } from "lucide-react";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 export default function Hero() {

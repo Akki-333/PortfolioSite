@@ -40,7 +40,8 @@ export default function Projects() {
       category: "Python",
       duration: "2 months",
       teamSize: "Self",
-      image: "https://images.unsplash.com/photo-1611974717482-48a0020251bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300",
+      // Use a local SVG asset to avoid remote hotlinking issues in deploys
+      image: "/stock-market.svg",
       description: "Conducted end-to-end analysis and forecasting of historical stock price data using Python.",
       fullDescription: "Executed cleaning, trend analysis, and model evaluation using MAE, RMSE, MAPE, and R2 metrics. Created visualizations and reports to communicate technical insights effectively for financial data.",
       features: [

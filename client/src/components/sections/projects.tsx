@@ -128,11 +128,19 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={project.title} className="premium-card p-6" data-testid={`project-card-${index}`}>
               <div className="h-48 overflow-hidden rounded-xl mb-6">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   data-testid={`project-image-${index}`}
+                  loading="lazy"
+                  onError={(e) => {
+                    // Fallback to a reliable placeholder if remote image fails
+                    // eslint-disable-next-line no-param-reassign
+                    e.currentTarget.onerror = null;
+                    // via.placeholder is reliable and fast for missing images
+                    e.currentTarget.src = 'https://via.placeholder.com/800x300?text=Image+Unavailable';
+                  }}
                 />
               </div>
               
@@ -219,6 +227,13 @@ export default function Projects() {
                     src={projects[selectedProject].image}
                     alt={projects[selectedProject].title}
                     className="w-full h-64 object-cover rounded-xl mb-6"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Fallback to placeholder in popup view as well
+                      // eslint-disable-next-line no-param-reassign
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = 'https://via.placeholder.com/800x300?text=Image+Unavailable';
+                    }}
                   />
                   
                   <div className="grid grid-cols-3 gap-4 mb-6">

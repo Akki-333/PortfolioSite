@@ -1,4 +1,13 @@
-"dependencies": {
+{
+  "name": "rest-express",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx api/index.ts",
+    "build": "vite build && esbuild api/index.ts --platform=node --packages=external --bundle --format=esm --outfile=api/index.js",
+    "start": "node api/index.js"
+  },
+  "dependencies": {
     "vite": "^5.4.19",
     "@vitejs/plugin-react": "^4.3.2",
     "express": "^4.21.2",
@@ -50,8 +59,18 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "framer-motion": "^11.13.1",
-    "nanoid": "^5.0.0",
-    "zod": "^3.23.8",
+    "nanoid": "^5.0.0",    "zod": "^3.23.8",
     "esbuild": "^0.25.0",
     "tsx": "^4.19.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "5.6.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17",
+    "drizzle-kit": "^0.20.17"
   }
+}

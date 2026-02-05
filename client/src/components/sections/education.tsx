@@ -10,7 +10,7 @@ export default function Education() {
       period: "2021 - 2025",
       status: "Completed",
       grade: "CGPA: 7.1",
-      specialization: "Specialization in Data Analytics and Software Development"
+      specialization: "COMPUTER SCIENCE AND ENGINEERING"
     },
     {
       degree: "Higher Secondary Education (12th Grade)",

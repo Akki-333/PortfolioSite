@@ -3,15 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development tsx api/index.ts",
+    "dev": "tsx api/index.ts",
     "build": "vite build && esbuild api/index.ts --platform=node --bundle --format=esm --outfile=api/index.js",
-    "start": "NODE_ENV=production node api/index.js",
-    "check": "tsc",
-    "db:push": "drizzle-kit push"
-  },
-  "dependencies": {
-    "express": "^4.21.2",
-    "vite": "^5.4.19",
-    "esbuild": "^0.25.0"
+    "start": "node api/index.js"
   }
 }

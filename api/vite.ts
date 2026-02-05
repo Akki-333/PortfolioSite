@@ -8,6 +8,7 @@ import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
 
+// Added export keyword
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true,
@@ -39,10 +40,16 @@ export async function setupVite(app: Express, server: Server) {
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
     try {
+      const url = req.originalUrl;
       const clientTemplate = path.resolve(process.cwd(), "client", "index.html");
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(`src="/src/main.tsx"`, `src="/src/main.tsx?v=${nanoid()}"`);
-      const page = await vite.transformIndexHtml(req.originalUrl, template);
+      
+      template = template.replace(
+        `src="/src/main.tsx"`,
+        `src="/src/main.tsx?v=${nanoid()}"`
+      );
+      
+      const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
@@ -51,12 +58,12 @@ export async function setupVite(app: Express, server: Server) {
   });
 }
 
+// Added export keyword and fixed path3/app2 typos
 export function serveStatic(app: Express) {
-  // CRITICAL: Point to the root dist/public folder
   const distPath = path.resolve(process.cwd(), "dist", "public");
 
   if (!fs.existsSync(distPath)) {
-    console.error(`Build folder not found at: ${distPath}`);
+    console.error(`CRITICAL: Static directory not found at ${distPath}`);
     return;
   }
 

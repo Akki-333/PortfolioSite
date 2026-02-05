@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Request Logging Middleware
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -41,15 +40,15 @@ app.use((req, res, next) => {
     res.status(status).json({ message });
   });
 
-  if (process.env.NODE_ENV !== "production") {
+  if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // Only listen on a port for local development
+  const port = parseInt(process.env.PORT || '5000', 10);
+  // Only listen if not on Vercel (Vercel manages the listener)
   if (process.env.NODE_ENV !== "production") {
-    const port = parseInt(process.env.PORT || '5000', 10);
     server.listen(port, "0.0.0.0", () => {
       log(`serving on port ${port}`);
     });
